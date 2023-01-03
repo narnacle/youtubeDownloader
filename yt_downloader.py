@@ -1,7 +1,7 @@
 from pytube import YouTube
 
 # Set the URL of the video you want to download
-url = "https://www.youtube.com/watch?v=Eg4niYQCCVc"
+url = "https://www.youtube.com/watch?v=oHg5SJYRHA0"
 
 # Create a YouTube object
 yt = YouTube(url)
@@ -12,6 +12,6 @@ video = yt.streams.filter(mime_type='video/mp4', res='1080p').first()
 
 # Set the filename
 if video is not None:
-    video.download('C:/Users/Narnacle/Downloads')
+    video.download('/path/to/download/directory')
 else:
     print("No video found with the specified criteria")
